@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Medallas Olímpicas</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Registro de Medallas Olímpicas</h2>
+        <form id="medalForm" action="database.php" method="post">
+            <div class="form-group">
+                <label for="country">País:</label>
+                <input type="text" class="form-control" id="country" name="country" onblur="validateInput('country', 'countryError')">
+                <small id="countryError" class="form-text text-danger"></small>
+            </div>
+            <div class="form-group">
+                <label for="gold">Medallas de Oro:</label>
+                <input type="number" class="form-control" id="gold" name="gold" required>
+            </div>
+            <div class="form-group">
+                <label for="silver">Medallas de Plata:</label>
+                <input type="number" class="form-control" id="silver" name="silver" required>
+            </div>
+            <div class="form-group">
+                <label for="bronze">Medallas de Bronce:</label>
+                <input type="number" class="form-control" id="bronze" name="bronze" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
