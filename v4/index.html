@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Medallas Olímpicas</title>
+    <link rel="stylesheet" href="lib/bootstrap-<version>.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Registro de Medallas Olímpicas</h1>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="country">Nombre del País:</label>
+                <input type="text" id="country" name="country" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="gold">Cantidad de Medallas de Oro:</label>
+                <input type="number" id="gold" name="gold" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="form-group">
+                <label for="silver">Cantidad de Medallas de Plata:</label>
+                <input type="number" id="silver" name="silver" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="form-group">
+                <label for="bronze">Cantidad de Medallas de Bronce:</label>
+                <input type="number" id="bronze" name="bronze" class="form-control" min="0" value="0" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
